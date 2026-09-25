@@ -33,19 +33,17 @@ const HeroSection = () => {
                              </p>
                     </div>
                     <div className="col-md-6">
-                        2
-                    </div>
-                    <div className="col-md-6">
-                        3
-                    </div>
-                    <div className="col-md-6">
-                        4
-                    </div>
-                    <div className="col-md-6">
-                        5
-                    </div>
-                    <div className="col-md-6">
-                        6
+                        <img 
+                        src="images/Herosection.jpg" 
+                        alt="job-search-image"
+                        style={{
+                        width :  "100%",
+                        height : "400px",
+                        objectFit : "cover"
+                        }}
+                        className="rounded-4"
+
+                        />  
                     </div>
                 </div>
             </div>

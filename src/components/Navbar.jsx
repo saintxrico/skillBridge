@@ -3,8 +3,8 @@ const Navbar = () => {
         <div>
             <nav className="navbar navbar-expand-lg bg-body-tertiary p-3">
                 <div className="container-fluid">
-                    <a className="navbar-brand fw-bold text-primary" href="#">
-                        skillBridge
+                    <a className="navbar-brand fw-bold" href="#">
+                        skill<span className="text-primary">Bridge</span>
                     </a>
                     <button
                         className="navbar-toggler"
@@ -26,17 +26,17 @@ const Navbar = () => {
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="#">
-                                    Features
+                                    Jobs
                                 </a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="#">
-                                    Pricing
+                                    About
                                 </a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link disabled" aria-disabled="true">
-                                    Disabled
+                                    Contact Us
                                 </a>
                             </li>
                         </ul>
