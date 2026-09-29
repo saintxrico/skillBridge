@@ -18,7 +18,7 @@ const JobCards = ({allJobs}) => {
                                    <button className="btn btn-outline-primary btn-sm"> More</button>
                                 </div>
                             </div>
-                        ))
+                      ))
                     }
                 </div>
         </div>
