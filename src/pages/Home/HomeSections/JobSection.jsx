@@ -1,21 +1,10 @@
-import { useEffect, useState } from "react"
+import useFetch from "../../../hook/useFetch"
 import JobCards from "../../../components/jobCards"
 
-const JobSection = () => {
-  const [jobs, setJobs] = useState([])
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState("")
+const JOBS_URL = "http://localhost:3000/jobs"
 
-  useEffect(() => {
-    fetch("http://localhost:3000/jobs")
-      .then((res) => {
-        if (!res.ok) throw new Error("Failed to load jobs")
-        return res.json()
-      })
-      .then((data) => setJobs(data))
-      .catch((err) => setError(err.message))
-      .finally(() => setLoading(false))
-  }, [])
+const JobSection = () => {
+  const { jobs, loading, error, retry } = useFetch(JOBS_URL)
 
   return (
     <div className="container my-2">
@@ -27,8 +16,21 @@ const JobSection = () => {
       </p>
 
       {loading && <p className="text-center">Loading jobs...</p>}
-      {error && <p className="text-center text-danger">{error}. Is json-server running?</p>}
-      {!loading && !error && <JobCards allJobs={jobs} />}
+
+      {error && (
+        <div className="alert alert-danger text-center" role="alert">
+          <p className="mb-2">{error}</p>
+          <button className="btn btn-outline-danger btn-sm" onClick={retry}>
+            Try again
+          </button>
+        </div>
+      )}
+
+      {!loading && !error && jobs.length === 0 && (
+        <p className="text-center text-muted">No job vacancies available right now.</p>
+      )}
+
+      {!loading && !error && jobs.length > 0 && <JobCards allJobs={jobs} />}
     </div>
   )
 }

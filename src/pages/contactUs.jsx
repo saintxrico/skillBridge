@@ -1,7 +1,6 @@
 const ContactUs = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
-    // send the data to your backend or an email service here
     alert("Message sent!")
   }
 
