@@ -1,4 +1,5 @@
 import { GrLocationPin } from "react-icons/gr";
+import { Link } from "react-router-dom";
 
 const JobCards = ({allJobs}) => {
     return ( 
@@ -15,7 +16,10 @@ const JobCards = ({allJobs}) => {
                                    </div>
                                    <h6 className="text-primary"> {jobs.companyName}</h6>
                                    <p> {jobs.jobDescription.slice(0,50)}....</p>
-                                   <button className="btn btn-outline-primary btn-sm"> More</button>
+                                   <Link 
+                                   to={`/jobdetails/${jobs.id}`} 
+                                   className="btn btn-outline-primary btn-sm"
+                                   > More</Link>
                                 </div>
                             </div>
                       ))

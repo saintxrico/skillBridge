@@ -5,6 +5,7 @@ import Home from "./pages/Home/home"
 import AllJobs from "./pages/Jobs/allJobs"
 import About from "./pages/About/about"
 import Contact from "./pages/Contact/contact"
+import JobDetails from "./pages/JobDetails"
 import { Route, Routes } from "react-router-dom"
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/jobs" element={<AllJobs />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/jobdetails/:id" element={<JobDetails />} /> 
       </Routes>
       <Footer />
     </div>

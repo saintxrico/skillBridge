@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 
 const useFetch = (url) => {
-  const [jobs, setJobs] = useState([])
+  const [data, setData] = useState(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState("")
   const [attempt, setAttempt] = useState(0)
@@ -9,7 +9,7 @@ const useFetch = (url) => {
   useEffect(() => {
     const controller = new AbortController()
 
-    const loadJobs = async () => {
+    const load = async () => {
       setLoading(true)
       setError("")
 
@@ -20,22 +20,18 @@ const useFetch = (url) => {
           throw new Error(`Server responded with ${res.status} ${res.statusText}`)
         }
 
-        let data
+        let json
         try {
-          data = await res.json()
+          json = await res.json()
         } catch {
           throw new Error("Received an invalid response from the server")
         }
 
-        if (!Array.isArray(data)) {
-          throw new Error("Unexpected data format received")
-        }
-
-        setJobs(data)
+        setData(json)
       } catch (err) {
         if (err.name === "AbortError") return // component unmounted, ignore
 
-        console.error("Failed to load jobs:", err)
+        console.error("Failed to load data:", err)
 
         setError(
           err instanceof TypeError
@@ -47,14 +43,14 @@ const useFetch = (url) => {
       }
     }
 
-    loadJobs()
+    load()
 
     return () => controller.abort()
   }, [url, attempt])
 
   const retry = () => setAttempt((a) => a + 1)
 
-  return { jobs, loading, error, retry }
+  return { data, loading, error, retry }
 }
 
-export default useFetch
+export default useFetch;

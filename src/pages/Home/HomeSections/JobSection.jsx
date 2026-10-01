@@ -4,7 +4,10 @@ import JobCards from "../../../components/jobCards"
 const JOBS_URL = "http://localhost:3000/jobs"
 
 const JobSection = () => {
-  const { jobs, loading, error, retry } = useFetch(JOBS_URL)
+  const { data, loading, error, retry } = useFetch(JOBS_URL)
+
+  // data is null until the fetch finishes, so fall back to an empty array
+  const jobs = Array.isArray(data) ? data : []
 
   return (
     <div className="container my-2">
