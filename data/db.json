@@ -1,7 +1,7 @@
 {
   "jobs": [
     {
-      "id": 1,
+      "id": "1",
       "jobTitle": "Frontend Developer",
       "companyName": "Bright Labs",
       "discretion": "fulltime",
@@ -9,7 +9,7 @@
       "location": "Nairobi, Kenya"
     },
     {
-      "id": 2,
+      "id": "2",
       "jobTitle": "Backend Engineer",
       "companyName": "Datastream Inc.",
       "discretion": "fulltime",
@@ -17,7 +17,7 @@
       "location": "Remote"
     },
     {
-      "id": 3,
+      "id": "3",
       "jobTitle": "Graphic Designer",
       "companyName": "Pixel Studio",
       "discretion": "parttime",
@@ -25,7 +25,7 @@
       "location": "Nairobi, Kenya"
     },
     {
-      "id": 4,
+      "id": "4",
       "jobTitle": "Data Analyst",
       "companyName": "Insight Metrics",
       "discretion": "fulltime",
@@ -33,7 +33,7 @@
       "location": "Mombasa, Kenya"
     },
     {
-      "id": 5,
+      "id": "5",
       "jobTitle": "Content Writer",
       "companyName": "WordCraft Media",
       "discretion": "contract",
@@ -41,7 +41,7 @@
       "location": "Remote"
     },
     {
-      "id": 6,
+      "id": "6",
       "jobTitle": "Mobile App Developer",
       "companyName": "AppNest Technologies",
       "discretion": "fulltime",
@@ -49,7 +49,7 @@
       "location": "Kisumu, Kenya"
     },
     {
-      "id": 7,
+      "id": "7",
       "jobTitle": "UI/UX Designer",
       "companyName": "Creative Minds Co.",
       "discretion": "fulltime",
@@ -57,7 +57,7 @@
       "location": "Nairobi, Kenya"
     },
     {
-      "id": 8,
+      "id": "8",
       "jobTitle": "DevOps Engineer",
       "companyName": "CloudWorks",
       "discretion": "fulltime",
@@ -65,7 +65,7 @@
       "location": "Remote"
     },
     {
-      "id": 9,
+      "id": "9",
       "jobTitle": "Marketing Coordinator",
       "companyName": "BrandBoost",
       "discretion": "parttime",
@@ -73,7 +73,7 @@
       "location": "Nairobi, Kenya"
     },
     {
-      "id": 10,
+      "id": "10",
       "jobTitle": "Customer Support Specialist",
       "companyName": "HelpDesk Solutions",
       "discretion": "contract",
@@ -81,7 +81,7 @@
       "location": "Nakuru, Kenya"
     },
     {
-      "id": 11,
+      "id": "11",
       "jobTitle": "Product Manager",
       "companyName": "Nova Systems",
       "discretion": "fulltime",
@@ -89,7 +89,7 @@
       "location": "Nairobi, Kenya"
     },
     {
-      "id": 12,
+      "id": "12",
       "jobTitle": "QA Tester",
       "companyName": "BugFree Technologies",
       "discretion": "parttime",
@@ -97,7 +97,7 @@
       "location": "Remote"
     },
     {
-      "id": 13,
+      "id": "13",
       "jobTitle": "HR Officer",
       "companyName": "PeopleFirst Ltd.",
       "discretion": "fulltime",
@@ -105,7 +105,7 @@
       "location": "Eldoret, Kenya"
     },
     {
-      "id": 14,
+      "id": "14",
       "jobTitle": "Sales Executive",
       "companyName": "MarketPro Africa",
       "discretion": "contract",
@@ -113,7 +113,7 @@
       "location": "Nairobi, Kenya"
     },
     {
-      "id": 15,
+      "id": "15",
       "jobTitle": "Machine Learning Engineer",
       "companyName": "AI Frontier",
       "discretion": "fulltime",
@@ -121,12 +121,22 @@
       "location": "Remote"
     },
     {
-      "id": 16,
+      "id": "16",
       "jobTitle": "Business Analyst",
       "companyName": "Vertex Consulting",
       "discretion": "fulltime",
       "jobDescription": "Gather and analyze business requirements to recommend process improvements and system solutions.",
       "location": "Nairobi, Kenya"
     }
-  ]
+  ],
+  "contact": [
+    {
+      "name": "Henry Njuguna",
+      "email": "henrynjugunawambugu999@gmail.com",
+      "phone": "0710383570",
+      "message": "1st test",
+      "id": "_h30ME4OA1I"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
