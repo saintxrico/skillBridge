@@ -136,6 +136,13 @@
       "phone": "0710383570",
       "message": "1st test",
       "id": "_h30ME4OA1I"
+    },
+    {
+      "name": "John Paul",
+      "email": "johnpaul@gmail.com",
+      "phone": "07001234567",
+      "message": "yes\n",
+      "id": "d3Sj9Bu-g58"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
